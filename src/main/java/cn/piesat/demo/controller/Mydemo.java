@@ -13,9 +13,9 @@ public class Mydemo {
 
     /**
      * 功能描述：测试Restful协议，从路径中获取字段
-     * @param city_id
-     * @param user_id
-     * @return
+     * @param city_id 城市ID
+     * @param user_id 用户ID
+     * @return params
      */
     @GetMapping("/{city_id}/{user_id}")
     public Object findObject(@PathVariable("city_id") String city_id, @PathVariable("user_id") String user_id) {
@@ -23,5 +23,10 @@ public class Mydemo {
         params.put("city_id", city_id);
         params.put("user_id", user_id);
         return params;
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "Hello World!";
     }
 }
