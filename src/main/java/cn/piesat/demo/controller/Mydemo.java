@@ -24,4 +24,9 @@ public class Mydemo {
         params.put("user_id", user_id);
         return params;
     }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "Hello World!";
+    }
 }
